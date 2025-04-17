@@ -1,12 +1,4 @@
-import {
-  AcademicCapIcon,
-  ArrowDownTrayIcon,
-  BuildingOffice2Icon,
-  CalendarIcon,
-  FlagIcon,
-  MapIcon,
-  SparklesIcon,
-} from '@heroicons/react/24/outline';
+import {AcademicCapIcon, FlagIcon, MapIcon} from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
@@ -25,7 +17,7 @@ import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
 import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
 import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
 import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
-import profilepic from '../images/profilepic.jpg';
+import profilepic from '../images/profilepic.png';
 import testimonialImage from '../images/testimonial.webp';
 import {
   About,
@@ -44,8 +36,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Portfolio',
+  description: "Site built for Ricky's portfolio",
 };
 
 /**
@@ -69,28 +61,24 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Ricky.`,
   description: (
     <>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+      <div className="text-lg prose-lg text-stone-200 sm:prose-xl lg:prose-2xl">
+        Western name: <strong>Corey Breshears</strong>
+      </div>
+      <p className="prose-lg text-stone-200 sm:prose-base lg:prose-lg">
+        I provide comprehensive <strong className="text-stone-100">full-stack development</strong> services,
+        specializing in designing, developing, and deploying robust web applications using modern front-end and back-end
+        technologies.
       </p>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+      <p className="prose-lg text-stone-200 sm:prose-base lg:prose-lg">
+        My expertise spans the entire software development lifecycle, including system architecture, API integration,
+        database management, and responsive UI/UX design, ensuring seamless and scalable digital solutions for clients.
       </p>
     </>
   ),
   actions: [
-    {
-      href: '/assets/resume.pdf',
-      text: 'Resume',
-      primary: true,
-      Icon: ArrowDownTrayIcon,
-    },
     {
       href: `#${SectionId.Contact}`,
       text: 'Contact',
@@ -104,16 +92,11 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `I am a skilled full-stack developer with proven expertise in designing, developing, and maintaining end-to-end web applications using the latest technologies. My strengths include creating intuitive user interfaces, robust server-side logic, and scalable solutions tailored to client requirements.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'JL DWIKORA NO 07, SUKABUMI 43133, Indonesia', Icon: MapIcon},
+    {label: 'Nationality', text: 'Indonesian', Icon: FlagIcon},
+    {label: 'Study', text: 'University of North Sumatra', Icon: AcademicCapIcon},
   ],
 };
 
@@ -125,16 +108,12 @@ export const skills: SkillGroup[] = [
     name: 'Spoken languages',
     skills: [
       {
-        name: 'English',
+        name: 'Indonesian',
         level: 10,
       },
       {
-        name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
+        name: 'English',
+        level: 9,
       },
     ],
   },
@@ -143,15 +122,15 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'React',
-        level: 9,
+        level: 10,
       },
       {
         name: 'Typescript',
-        level: 7,
+        level: 10,
       },
       {
         name: 'GraphQL',
-        level: 6,
+        level: 9,
       },
     ],
   },
@@ -160,15 +139,15 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'Node.js',
+        level: 10,
+      },
+      {
+        name: 'Golang',
         level: 8,
       },
       {
         name: 'Rust',
-        level: 5,
-      },
-      {
-        name: 'Golang',
-        level: 4,
+        level: 6,
       },
     ],
   },
@@ -177,15 +156,15 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'React Native',
-        level: 9,
+        level: 10,
       },
       {
         name: 'Flutter',
-        level: 4,
+        level: 9,
       },
       {
         name: 'Swift',
-        level: 3,
+        level: 7,
       },
     ],
   },
@@ -268,16 +247,15 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
-  },
-  {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'May 2015',
+    location: 'University of North Sumatra',
+    title: 'Bachelors in Computer Science',
+    content: (
+      <p>
+        Earned a Bachelor of Computer Science degree, demonstrating strong proficiency in programming, algorithms, and
+        software development at the university level.
+      </p>
+    ),
   },
 ];
 
@@ -313,18 +291,28 @@ export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
     {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
+      name: 'Jim Tanner, Cognosos',
+      text: 'We were impressed by their ability to quickly understand our requirements and create a user-friendly, robust web application.',
       image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
     },
     {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
+      name: 'Samantha Lee, TechNova Solutions',
+      text: 'The fullstack development team delivered our project on time with exceptional attention to detail and seamless integration between front-end and back-end systems.',
       image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
     },
     {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
+      name: 'Priya Patel, GreenLeaf Logistics',
+      text: 'Excellent communication throughout the project—every feature worked perfectly, and they were responsive to feedback and changes.',
+      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
+    },
+    {
+      name: 'James O’Connor, BluePeak Ventures',
+      text: 'Their expertise in both front-end and back-end technologies resulted in a scalable and efficient solution for our business needs.',
+      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
+    },
+    {
+      name: 'Maria Gonzalez, BrightBridge Health',
+      text: 'The developers provided outstanding support and maintenance post-launch, ensuring our platform runs smoothly and reliably.',
       image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
     },
   ],
@@ -336,27 +324,16 @@ export const testimonial: TestimonialSection = {
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  description: 'Feel free to contact me to discuss your project needs or collaboration opportunities.',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'matil112265@gmail.com',
+      href: 'mailto:matil112265@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
-    },
-    {
-      type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
-    },
-    {
-      type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'SUKABUMI, Indonesia',
     },
   ],
 };

@@ -12,7 +12,7 @@ const About: FC = memo(() => {
       <div className={classNames('grid grid-cols-1 gap-y-4', {'md:grid-cols-4': !!profileImageSrc})}>
         {!!profileImageSrc && (
           <div className="col-span-1 flex justify-center md:justify-start">
-            <div className="relative h-24 w-24 overflow-hidden rounded-xl md:h-32 md:w-32">
+            <div className="relative h-24 w-24 overflow-hidden rounded-xl md:h-36 md:w-36">
               <Image alt="about-me-image" className="h-full w-full object-cover" src={profileImageSrc} />
             </div>
           </div>
@@ -22,7 +22,7 @@ const About: FC = memo(() => {
             <h2 className="text-2xl font-bold text-white">About me</h2>
             <p className="prose prose-sm text-gray-300 sm:prose-base">{description}</p>
           </div>
-          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <ul className="grid grid-cols-1 gap-4">
             {aboutItems.map(({label, text, Icon}, idx) => (
               <li className="col-span-1 flex  items-start gap-x-2" key={idx}>
                 {Icon && <Icon className="h-5 w-5 text-white" />}
